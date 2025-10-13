@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piese Motociclete</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #eeeeee;
+    }
+
+    /* HEADER NEGRU */
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #ff9800;
+    }
+
+    header .logo {
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    header .actions {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
+    .cart-btn {
+      background-color: #ff9800;
+      padding: 6px 14px;
+      border-radius: 4px;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .cart-btn:hover {
+      background-color: #e68900;
+    }
+
+    /* MENIU NEGRU CU ACCENTE */
+    nav {
+      background-color: #2b2b2b;
+      color: white;
+      display: flex;
+      padding: 10px 20px;
+      gap: 20px;
+      border-bottom: 2px solid #ff9800;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ff9800;
+    }
+
+    /* CONTAINER GENERAL */
+    .container {
+      display: flex;
+      padding: 20px;
+    }
+
+    /* SIDEBAR PORTOCALIU */
+    .sidebar {
+      width: 20%;
+      background-color: #ff9800;
+      color: #1a1a1a;
+      padding: 15px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      margin-right: 20px;
+      border-radius: 5px;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      color: #1a1a1a;
+    }
+
+    .sidebar ul {
+      padding-left: 18px;
+    }
+    .sidebar ul li {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    /* CONTINUT PRINCIPAL */
+    .main-content {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* GALERIE */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+      border: 2px solid #ff9800;
+    }
+
+    /* NEWSLETTER CU BORDER PORTOCALIU */
+    .newsletter {
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      border-radius: 5px;
+      border-left: 5px solid #ff9800;
+      text-align: center;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 10px;
+      width: 60%;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .newsletter button {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .newsletter button:hover {
+      background-color: #e68900;
+    }
+
+    /* TOP PRODUSE CU ACCENTE */
+    .top-products {
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      border-radius: 5px;
+      border-top: 3px solid #ff9800;
+    }
+
+    .top-products .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .top-products .product {
+      text-align: center;
+    }
+
+    .top-products .product img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+      border: 2px solid #ff9800;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">MotoParts.ro</div>
+  <div class="actions">
+    <a href="#" class="cart-btn">🛒 Coș</a>
+    <a href="#">Login / Contul meu</a>
+  </div>
+</header>
+
+<nav>
+  <a href="#">Motoare</a>
+  <a href="#">Carene</a>
+  <a href="#">Frâne</a>
+  <a href="#">Accesorii</a>
+  <a href="#">Anvelope</a>
+  <a href="#">Electrică</a>
+</nav>
+
+<div class="container">
+  <aside class="sidebar">
+    <h3>Oferte & Discount-uri</h3>
+    <ul>
+      <li>Reduceri la frâne</li>
+      <li>Promo carene sport</li>
+      <li>Anvelope -20%</li>
+      <li>Accesorii noi</li>
+    </ul>
+  </aside>
+
+  <div class="main-content">
+    <div class="gallery">
+      <img src="motociclu-barton-fr50cc-culoare-negru-verde-467764.jpg" alt="">
+      <img src="2025-Yamaha-YZF900R9-EU-Icon_Blue-360-Degrees-001-03.jpg" alt="">
+      <img src="Suzuki-GSX-8R--model-cat-pic-1.png" alt="">
+      <img src="43183.png" alt="">
+      <img src="filtru-ulei-yamaha-yzf-250-09-20-mt-125-15-19-yzf-450-09-20-wrf-250-450-09-20-yfz-ybr-yfm-250-181989.jpg" alt="">
+      <img src="kit-carene-ktm-2024-culoare-oem-ufo-grafica-personalizata-cadou-1000x1000.jpg" alt="">
+    </div>
+
+    <div class="newsletter">
+      <h2>Abonează-te la newsletter</h2>
+      <p>Primește oferte, noutăți și promoții</p>
+      <input type="email" placeholder="Adresa ta de email">
+      <button>Abonează-mă</button>
+    </div>
+
+    <div class="top-products">
+      <h2>Cele mai comandate produse</h2>
+      <div class="products">
+        <div class="product">
+          <img src="produsul 1.png" alt="">
+          <p>Piesă A</p>
+        </div>
+        <div class="product">
+          <img src="produs 2.png" alt="">
+          <p>Piesă B</p>
+        </div>
+        <div class="product">
+          <img src="produs 3.png" alt="">
+          <p>Piesă C</p>
+        </div>
+        <div class="product">
+          <img src="produs 4.png" alt="">
+          <p>Piesă D</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
