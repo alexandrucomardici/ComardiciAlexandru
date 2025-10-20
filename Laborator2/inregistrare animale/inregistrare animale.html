@@ -20,7 +20,7 @@
 
             <div class="field">
                 <label for="telefon">Telefon</label>
-                <input type="tel" id="telefon" name="telefon" placeholder="07xx xxx xxx" required>
+                <input type="tel" id="telefon" name="telefon" placeholder="07xxxxxxxx" pattern="[0-9]{10}" required>
             </div>
 
             <div class="field">
@@ -66,5 +66,12 @@
             </div>
         </form>
     </main>
+
+    <script>
+        // Restricție input doar cifre pentru telefon
+        document.getElementById('telefon').addEventListener('input', function(e) {
+            this.value = this.value.replace(/\D/g, '');
+        });
+    </script>
 </body>
 </html>
