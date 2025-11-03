@@ -1,0 +1,46 @@
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Exercitiul_4</title>
+<style>
+body {
+  font-family:'Courier New',monospace;
+  background:#0f172a;
+  color:#dbeafe;
+  padding:28px;
+}
+.panel {
+  background:#071029;
+  padding:16px;
+  border-radius:8px;
+  border-left:5px solid #60a5fa;
+  max-width:780px;
+}
+h1 { color:#60a5fa; }
+</style>
+</head>
+<body>
+<div class="panel">
+<h1>Exercitiul 4</h1>
+<script>
+const w = 12, x = 11, y = 12, z = 11;
+const freq = {};
+[w, x, y, z].forEach(v => freq[v] = (freq[v] || 0) + 1);
+const u = Object.keys(freq).map(Number);
+
+if (u.length === 1) {
+  const s = u[0];
+  console.log(`Pătrat, P=${4 * s}, A=${s * s}`);
+} 
+else if (u.length === 2 && Object.values(freq).every(c => c === 2)) {
+  const [a, b] = u;
+  console.log(`Cele 4 numere pot reprezenta laturi ale unui dreptunghi! Perimetrul este:${2 * (a + b)}, Aria este:${a * b}`);
+} 
+else {
+  console.log('Cele 4 numere nu pot reprezenta laturi ale unui dreptunghi!');
+}
+</script>
+</div>
+</body>
+</html>

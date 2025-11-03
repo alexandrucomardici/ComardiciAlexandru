@@ -1,0 +1,33 @@
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Exercitiul_2</title>
+<style>
+body{font-family:'Trebuchet MS',sans-serif;background:#f3f4f6;color:#0b1220;padding:28px}
+.box{background:#fff;border-radius:8px;padding:16px;box-shadow:0 6px 18px rgba(2,6,23,0.12);max-width:760px}
+h1{color:#0369a1}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>Exercitiul 2 </h1>
+<script>
+const tranzactie1 = true;
+const tranzactie2 = false;
+if (tranzactie1) console.log('Tranzactie acceptata!');
+if (tranzactie2) console.log('Tranzactie acceptata!'); else console.log('Tranzactie refuzata!');
+
+  /* 
+    Comportament observat:
+    La tranzactie1 s-a afisat mesajul „Tranzactie acceptata” pentru ca variabila este true, deci conditia din if s-a indeplinit.
+    La tranzactie2 s-a afisat mesajul „Tranzactie refuzata” pentru ca variabila este false, deci s-a executat ramura else.
+
+    Explicatie:
+    Instructiunea if verifica daca o conditie este adevarata sau falsa.
+    Daca e true, se executa codul din if, iar daca e false si avem si else, se executa codul din else.
+  */
+</script>
+</div>
+</body>
+</html>
