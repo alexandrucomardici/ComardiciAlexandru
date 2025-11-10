@@ -274,3 +274,76 @@ footer {
     margin: 0 auto;
   }
 }
+/* === POP-UP BLACK FRIDAY === */
+#popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#popup-content {
+  position: relative;
+  background: none;
+  border: none;
+}
+
+#popup-content img {
+  width: 400px;
+  max-width: 90vw;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+#close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #fff;
+  border-radius: 50%;
+  border: none;
+  width: 25px;
+  height: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* === BANNER BLACK FRIDAY (roșu cu text negru) === */
+.blackfriday-banner {
+  background: #ff0000; /* roșu intens */
+  color: #000; /* text negru */
+  text-align: center;
+  font-weight: bold;
+  padding: 12px 10px;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.blackfriday-banner strong {
+  color: #000; /* negru și pentru textul îngroșat */
+}
+
+.banner-btn {
+  background-color: #000;
+  color: #ff0000;
+  margin-left: 10px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.banner-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+

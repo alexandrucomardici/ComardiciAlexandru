@@ -96,6 +96,26 @@
   <footer>
     <p>&copy; 2025 MotoParts.ro - Toate drepturile rezervate.</p>
   </footer>
+<div id="popup">
+  <div id="popup-content">
+    <button id="close-btn">&times;</button>
+    <a href="bfriday.html">
+      <img src="blackfriday.png" alt="Black Friday">
+    </a>
+  </div>
+</div>
+
+<script>
+  window.onload = function() {
+    setTimeout(() => {
+      document.getElementById("popup").style.display = "flex";
+    }, 2000);
+  };
+
+  document.getElementById("close-btn").onclick = function() {
+    document.getElementById("popup").style.display = "none";
+  };
+</script>
 
 </body>
 </html>
