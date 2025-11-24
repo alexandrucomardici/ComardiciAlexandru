@@ -10,6 +10,7 @@ services:
       - "8080:80"
     depends_on:
       - mysql
+    command: bash -c "docker-php-ext-install mysqli && apache2-foreground"
 
   mysql:
     image: mysql:5.7

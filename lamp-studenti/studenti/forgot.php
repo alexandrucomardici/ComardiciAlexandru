@@ -1,4 +1,4 @@
-<!-- forgot.html -->
+<!-- forgot.php -->
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -64,21 +64,21 @@
 <body>
 
   <header>
-    <div class="logo"><a href="index.html">MotoParts.ro</a></div>
+    <div class="logo"><a href="index.php">MotoParts.ro</a></div>
     <div class="actions">
-      <a href="cos.html" class="cart-btn">🛒 Coș</a>
-      <a href="login.html" style="color:white; text-decoration:none;">Login / Contul meu</a>
+      <a href="cos.php" class="cart-btn">🛒 Coș</a>
+      <a href="login.php" style="color:white; text-decoration:none;">Login / Contul meu</a>
     </div>
   </header>
 
   <nav>
-    <a href="index.html">Acasă</a>
-    <a href="motoare.html">Motoare</a>
-    <a href="carene.html">Carene</a>
-    <a href="frane.html">Frâne</a>
-    <a href="accesorii.html">Accesorii</a>
-    <a href="anvelope.html">Anvelope</a>
-    <a href="ulei.html">Ulei și Filtre</a>
+    <a href="index.php">Acasă</a>
+    <a href="motoare.php">Motoare</a>
+    <a href="carene.php">Carene</a>
+    <a href="frane.php">Frâne</a>
+    <a href="accesorii.php">Accesorii</a>
+    <a href="anvelope.php">Anvelope</a>
+    <a href="ulei.php">Ulei și Filtre</a>
   </nav>
 
   <main class="forgot-container">
@@ -103,7 +103,7 @@
       </form>
 
       <div style="text-align:center; margin-top:12px;">
-        <a href="login.html" style="color:#ff9800; font-weight:600; text-decoration:none;">Înapoi la autentificare</a>
+        <a href="login.php" style="color:#ff9800; font-weight:600; text-decoration:none;">Înapoi la autentificare</a>
       </div>
     </div>
   </main>
@@ -164,4 +164,4 @@
     })();
   </script>
 </body>
-</html>
+  </html>

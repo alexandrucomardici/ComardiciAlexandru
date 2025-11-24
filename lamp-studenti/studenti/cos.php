@@ -1,3 +1,4 @@
+<?php include "db.php"; ?>
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -147,20 +148,20 @@
 
 <body>
   <header>
-    <div class="logo"><a href="index.html">MotoParts.ro</a></div>
+    <div class="logo"><a href="index.php">MotoParts.ro</a></div>
     <div class="actions">
-      <a href="cos.html" class="cart-btn">🛒 Coș</a>
-      <a href="login.html" style="color:white; text-decoration:none;">Login / Contul meu</a>
+      <a href="cos.php" class="cart-btn">🛒 Coș</a>
+      <a href="login.php" style="color:white; text-decoration:none;">Login / Contul meu</a>
     </div>
   </header>
 
   <nav>
-    <a href="motoare.html">Motoare</a>
-    <a href="carene.html">Carene</a>
-    <a href="frane.html">Frâne</a>
-    <a href="accesorii.html">Accesorii</a>
-    <a href="anvelope.html">Anvelope</a>
-    <a href="ulei.html">Ulei si Filtre</a>
+    <a href="motoare.php">Motoare</a>
+    <a href="carene.php">Carene</a>
+    <a href="frane.php">Frâne</a>
+    <a href="accesorii.php">Accesorii</a>
+    <a href="anvelope.php">Anvelope</a>
+    <a href="ulei.php">Ulei si Filtre</a>
   </nav>
 
   <div class="container">
@@ -239,4 +240,4 @@
     });
   </script>
 </body>
-</html>
+  </html>

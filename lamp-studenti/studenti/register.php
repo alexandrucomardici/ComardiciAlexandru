@@ -1,9 +1,10 @@
+<?php include "db.php"; ?>
 <!DOCTYPE html>
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Autentificare - MotoParts.ro</title>
+  <title>Creează cont - MotoParts.ro</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -65,29 +66,29 @@
       color: #ff9800;
     }
 
-    .login-container {
+    .register-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 80vh;
+      height: 85vh;
     }
 
-    .login-card {
+    .register-card {
       background-color: white;
       border-radius: 10px;
       padding: 40px 35px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.15);
       width: 100%;
-      max-width: 400px;
+      max-width: 420px;
       transition: 0.3s;
     }
 
-    .login-card:hover {
+    .register-card:hover {
       transform: translateY(-3px);
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
-    .login-card h2 {
+    .register-card h2 {
       text-align: center;
       margin-bottom: 25px;
       border-left: 6px solid #ff9800;
@@ -137,41 +138,36 @@
       margin-top: 40px;
       padding: 15px;
     }
-a.hover-underline {
-  color: #ff9800;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-a.hover-underline:hover {
-  text-decoration: underline;
-}
   </style>
 </head>
 
 <body>
   <header>
-    <div class="logo"><a href="index.html">MotoParts.ro</a></div>
+    <div class="logo"><a href="index.php">MotoParts.ro</a></div>
     <div class="actions">
-      <a href="cos.html" class="cart-btn">🛒 Coș</a>
-      <a href="login.html" style="color:white; text-decoration:none;">Login / Contul meu</a>
+      <a href="cos.php" class="cart-btn">🛒 Coș</a>
+      <a href="login.php" style="color:white; text-decoration:none;">Login / Contul meu</a>
     </div>
   </header>
 
   <nav>
-    <a href="index.html">Acasă</a>
-    <a href="motoare.html">Motoare</a>
-    <a href="carene.html">Carene</a>
-    <a href="frane.html">Frâne</a>
-    <a href="accesorii.html">Accesorii</a>
-    <a href="anvelope.html">Anvelope</a>
-    <a href="ulei.html">Ulei si Filtre</a>
+    <a href="index.php">Acasă</a>
+    <a href="motoare.php">Motoare</a>
+    <a href="carene.php">Carene</a>
+    <a href="frane.php">Frâne</a>
+    <a href="accesorii.php">Accesorii</a>
+    <a href="anvelope.php">Anvelope</a>
+    <a href="ulei.php">Ulei si Filtre</a>
   </nav>
 
-  <div class="login-container">
-    <div class="login-card">
-      <h2>Autentificare</h2>
-      <form onsubmit="return loginUser(event)">
+  <div class="register-container">
+    <div class="register-card">
+      <h2>Creează cont nou</h2>
+      <form onsubmit="return registerUser(event)">
+        <div class="mb-3">
+          <label for="fullname" class="form-label">Nume complet</label>
+          <input type="text" id="fullname" class="form-control" placeholder="Ex: Andrei Popescu" required>
+        </div>
         <div class="mb-3">
           <label for="email" class="form-label">Adresă de email</label>
           <input type="email" id="email" class="form-control" placeholder="exemplu@email.com" required>
@@ -180,47 +176,44 @@ a.hover-underline:hover {
           <label for="password" class="form-label">Parolă</label>
           <input type="password" id="password" class="form-control" placeholder="••••••••" required>
         </div>
-        <div class="form-check mb-3">
-          <input type="checkbox" class="form-check-input" id="remember">
-          <label class="form-check-label" for="remember">Ține-mă minte</label>
+        <div class="mb-3">
+          <label for="confirm" class="form-label">Confirmă parola</label>
+          <input type="password" id="confirm" class="form-control" placeholder="••••••••" required>
         </div>
-        <button type="submit" class="btn-orange">Login</button>
+        <button type="submit" class="btn-orange">Creează cont</button>
       </form>
 
-    <div style="text-align:center; margin-top:12px;">
-  <a href="forgot.html" style="color:#ff9800; font-weight:bold; text-decoration:none;"
-     onmouseover="this.style.textDecoration='underline';"
-     onmouseout="this.style.textDecoration='none';">
-    Ai uitat parola?
-  </a>
-</div>
+      <div class="links">
+        <a href="login.php">Ai deja cont? Autentifică-te</a>
+      </div>
+    </div>
+  </div>
 
-<div style="text-align:center; margin-top:12px;">
-  <a href="register.html" style="color:#ff9800; font-weight:bold; text-decoration:none;"
-     onmouseover="this.style.textDecoration='underline';"
-     onmouseout="this.style.textDecoration='none';">
-    Creează un cont nou
-  </a>
-</div>
-
-</div>
-</div>
   <footer>
     <p>© 2025 MotoParts.ro — Toate drepturile rezervate.</p>
   </footer>
 
   <script>
-    function loginUser(event) {
+    function registerUser(event) {
       event.preventDefault();
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
 
-      if (email === "admin@motoparts.ro" && password === "admin123") {
-        alert("Autentificare reușită! Bine ai revenit, Admin!");
-        window.location.href = "index.html";
-      } else {
-        alert("Email sau parolă incorectă!");
+      const name = document.getElementById('fullname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const pass = document.getElementById('password').value;
+      const confirm = document.getElementById('confirm').value;
+
+      if (pass !== confirm) {
+        alert("Parolele nu coincid!");
+        return false;
       }
+
+      if (pass.length < 6) {
+        alert("Parola trebuie să aibă cel puțin 6 caractere!");
+        return false;
+      }
+
+      alert(`Contul a fost creat cu succes pentru ${name}!`);
+      window.location.href = "login.php";
     }
   </script>
 </body>

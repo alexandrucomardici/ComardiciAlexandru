@@ -1,3 +1,4 @@
+<?php include "db.php"; ?>
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -51,7 +52,7 @@
       margin: 15px 0;
     }
 
-    .add-to-cart {
+    .add-to-cart, .toggle-details, .check-stock {
       background-color: #ff9800;
       color: white;
       border: none;
@@ -61,9 +62,12 @@
       cursor: pointer;
       transition: 0.3s;
       width: fit-content;
+      margin-top: 10px;
     }
 
-    .add-to-cart:hover {
+    .add-to-cart:hover,
+    .toggle-details:hover,
+    .check-stock:hover {
       background-color: #e68900;
     }
 
@@ -77,31 +81,33 @@
 <body>
 
 <header>
-  <div class="logo"><a href="index.html">MotoParts.ro</a></div>
+  <div class="logo"><a href="index.php">MotoParts.ro</a></div>
   <div class="actions">
-    <a href="cos.html" class="cart-btn">🛒 Coș</a>
-    <a href="login.html" style="color:white; text-decoration:none;">Login / Contul meu</a>
+    <a href="cos.php" class="cart-btn">🛒 Coș</a>
+    <a href="login.php" style="color:white; text-decoration:none;">Login / Contul meu</a>
   </div>
 </header>
 
 <nav>
-  <a href="motoare.html">Motoare</a>
-  <a href="carene.html">Carene</a>
-  <a href="frane.html">Frâne</a>
-  <a href="accesorii.html">Accesorii</a>
-  <a href="anvelope.html">Anvelope</a>
-  <a href="ulei.html" class="active">Ulei si Filtre</a>
+  <a href="motoare.php">Motoare</a>
+  <a href="carene.php">Carene</a>
+  <a href="frane.php">Frâne</a>
+  <a href="accesorii.php">Accesorii</a>
+  <a href="anvelope.php">Anvelope</a>
+  <a href="ulei.php" class="active">Ulei si Filtre</a>
 </nav>
 
 <div class="container">
   <aside class="sidebar">
-    <h3>Categorii populare</h3>
+   <ul>
+ <h3>Categorii populare</h3>
     <ul>
       <li>Ulei Motor Enduro</li>
-<li>Ulei Motor Race</li>
-<li>Filtre Sport</li>
-<li>Filtre Enduro</li>
+      <li>Ulei Motor Race</li>
+      <li>Filtre Sport</li>
+      <li>Filtre Enduro</li>
     </ul>
+ </ul>
   </aside>
 
   <div class="main-content">
@@ -114,8 +120,16 @@
         <div class="product-info">
           <h2>Filtru de ulei Yamaha YZF / MT / WRF / YFM</h2>
           <p class="price">49,90 RON</p>
+
           <button class="add-to-cart">Adaugă în coș 🛒</button>
-          <div class="description">
+
+          <!-- BUTON AFISARE/ASCUNDERE DETALII -->
+          <button class="toggle-details">Ascunde detalii</button>
+
+          <!-- BUTON VERIFICARE STOC -->
+          <button class="check-stock">Verifică stoc</button>
+
+          <div class="description" id="productDescription">
             <p>
               Filtru de ulei compatibil cu o gamă largă de modele Yamaha:
               YZF 250 (2009–2020), MT 125 (2015–2019), YZF 450 (2009–2020),
@@ -126,11 +140,37 @@
               împotriva impurităților. Recomandat pentru întreținerea regulată a motocicletei.
             </p>
           </div>
+
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- SCRIPT PENTRU FUNCTIONALITATE -->
+<script>
+  // Ascunde/Afișează detalii
+  const toggleBtn = document.querySelector(".toggle-details");
+  const description = document.getElementById("productDescription");
+
+  toggleBtn.addEventListener("click", () => {
+    if (description.style.display === "none") {
+      description.style.display = "block";
+      toggleBtn.textContent = "Ascunde detalii";
+    } else {
+      description.style.display = "none";
+      toggleBtn.textContent = "Afișează detalii";
+    }
+  });
+
+  // Buton verificare stoc
+  const stockBtn = document.querySelector(".check-stock");
+
+  stockBtn.addEventListener("click", () => {
+    stockBtn.style.backgroundColor = "#4CAF50";
+    stockBtn.textContent = "Stoc disponibil ✓";
+  });
+</script>
 
 </body>
 </html>

@@ -1,3 +1,4 @@
+<?php include "db.php"; ?>
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -17,20 +18,20 @@
 </div>
 
 <header>
-  <div class="logo"><a href="index.html">MotoParts.ro</a></div>
+  <div class="logo"><a href="index.php">MotoParts.ro</a></div>
   <div class="actions">
-    <a href="cos.html" class="cart-btn">🛒 Coș</a>
-    <a href="login.html" style="color:white; text-decoration:none;">Login / Contul meu</a>
+    <a href="cos.php" class="cart-btn">🛒 Coș</a>
+    <a href="login.php" style="color:white; text-decoration:none;">Login / Contul meu</a>
   </div>
 </header>
 
 <nav>
-  <a href="motoare.html">Motoare</a>
-  <a href="carene.html">Carene</a>
-  <a href="frane.html">Frâne</a>
-  <a href="accesorii.html">Accesorii</a>
-  <a href="anvelope.html">Anvelope</a>
-  <a href="ulei.html">Ulei și Filtre</a>
+  <a href="motoare.php">Motoare</a>
+  <a href="carene.php">Carene</a>
+  <a href="frane.php">Frâne</a>
+  <a href="accesorii.php">Accesorii</a>
+  <a href="anvelope.php">Anvelope</a>
+  <a href="ulei.php">Ulei și Filtre</a>
 </nav>
 
 <div class="container" id="oferte">
@@ -56,7 +57,7 @@
         <div class="product"><img src="disc.png" alt=""><p>Disc frână Brembo</p></div>
         <div class="product"><img src="produs 2.png" alt=""><p>Plăcuțe EBC Racing</p></div>
         <div class="product"><img src="uleifrana.png" alt=""><p>Lichid frână Motul DOT 5.1</p></div>
-        <a href="frane.html" class="cart-btn" style="align-self:center;">Vezi toate ofertele →</a>
+        <a href="frane.php" class="cart-btn" style="align-self:center;">Vezi toate ofertele →</a>
       </div>
 
       <!-- === SECTIUNEA ULEI & FILTRE === -->
@@ -65,7 +66,7 @@
         <div class="product"><img src="produsul 1.png" alt=""><p>Ulei Motul 7100</p></div>
         <div class="product"><img src="filtru-ulei-yamaha-yzf-250-09-20-mt-125-15-19-yzf-450-09-20-wrf-250-450-09-20-yfz-ybr-yfm-250-181989.jpg" alt=""><p>Filtru Ulei Yamaha</p></div>
         <div class="product"><img src="uleimotul.png" alt=""><p>Castrol Power1 Racing</p></div>
-        <a href="ulei.html" class="cart-btn" style="align-self:center;">Vezi toate ofertele →</a>
+        <a href="ulei.php" class="cart-btn" style="align-self:center;">Vezi toate ofertele →</a>
       </div>
 
       <!-- === SECTIUNEA ACCESORII === -->
@@ -74,7 +75,7 @@
         <div class="product"><img src="accesori1.png" alt=""><p>Kit întreținere lanț</p></div>
         <div class="product"><img src="suport telefon.png" alt=""><p>Suport telefon moto</p></div>
         <div class="product"><img src="geantamoto.png" alt=""><p>Geantă de rezervor</p></div>
-        <a href="accesorii.html" class="cart-btn" style="align-self:center;">Vezi toate ofertele →</a>
+        <a href="accesorii.php" class="cart-btn" style="align-self:center;">Vezi toate ofertele →</a>
       </div>
 
       <!-- === SECTIUNEA ANVELOPE === -->
@@ -83,7 +84,7 @@
         <div class="product"><img src="produs 3.png" alt=""><p>Anvelopă Michelin Sport</p></div>
         <div class="product"><img src="Pirelidiablo.png" alt=""><p>Anvelopă Pirelli Diablo</p></div>
         <div class="product"><img src="aNVELOPA SCUTER.png" alt=""><p>Anvelopă Metzeler Roadtec</p></div>
-        <a href="anvelope.html" class="cart-btn" style="align-self:center;">Vezi toate ofertele →</a>
+        <a href="anvelope.php" class="cart-btn" style="align-self:center;">Vezi toate ofertele →</a>
       </div>
 
       <!-- === SECTIUNEA CARENE === -->
@@ -92,7 +93,7 @@
         <div class="product"><img src="carene suzuki.png" alt=""><p>Carene sport Suzuki</p></div>
         <div class="product"><img src="karene ktm.png" alt=""><p>Kit carene KTM</p></div>
         <div class="product"><img src="Carene albastre.png" alt=""><p>Carene Yamaha R1</p></div>
-        <a href="carene.html" class="cart-btn" style="align-self:center;">Vezi toate ofertele →</a>
+        <a href="carene.php" class="cart-btn" style="align-self:center;">Vezi toate ofertele →</a>
       </div>
 
     </div>
