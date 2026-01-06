@@ -1,4 +1,7 @@
-<?php include "db.php"; ?>
+<?php
+include "db.php";  // asigură-te că calea e corectă
+?>
+
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -7,12 +10,87 @@
   <title>Filtru de ulei Yamaha - MotoParts.ro</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Stiluri suplimentare doar pentru pagina de produs */
+    /* ===== BACKGROUND GRAFFITI ===== */
+    body { 
+      margin:0; 
+      font-family:'Segoe UI', Arial, sans-serif; 
+      background: linear-gradient(135deg, #e0e0e0 0%, #ffffff 50%, #ff9800 100%);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      position: relative;
+    }
+    body::before {
+      content:"";
+      position:fixed;
+      top:0; left:0; right:0; bottom:0;
+      background: url('images/spray-texture.png') repeat;
+      opacity:0.05;
+      pointer-events:none;
+    }
+
+    /* HEADER */
+    header { 
+        background:#1a1a1a;
+        color:white;
+        padding:10px 20px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        border-bottom:3px solid #ff9800;
+    }
+    header .logo a { color:white; text-decoration:none; font-weight:bold; font-size:1.5em; }
+    header .actions a { margin-left:12px; color:white; text-decoration:none; }
+    header .cart-btn { background:#ff9800; padding:8px 12px; border-radius:6px; font-weight:bold; }
+
+    /* NAV */
+    nav { 
+        background:#2b2b2b; 
+        display:flex; 
+        justify-content:center; 
+        flex-wrap:wrap; 
+        gap:10px; 
+        padding:10px 20px;
+    }
+    nav a { 
+        text-decoration:none; 
+        color:white; 
+        padding:6px 12px; 
+        display:inline-block; 
+        border-radius:5px; 
+        font-weight:600;
+    }
+    nav a.active { background:#ff9800; color:white; }
+    nav a:hover { background:#ff9800; color:white; }
+
+    /* PAGINA PRODUS */
+    .container {
+      display:flex;
+      max-width:1200px;
+      margin:40px auto;
+      padding:0 15px;
+      gap:30px;
+      flex-wrap:wrap;
+    }
+    .sidebar {
+      flex:1 1 200px;
+      background: rgba(255,255,255,0.9);
+      padding:15px;
+      border-radius:8px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      border-top:3px solid #ff9800;
+    }
+    .sidebar h3 { margin-top:0; color:#1a1a1a; }
+    .sidebar ul { list-style:none; padding:0; }
+    .sidebar li { margin-bottom:8px; }
+
+    .main-content { flex:2 1 600px; }
+
     .product-page {
-      background-color: white;
+      background: rgba(255,255,255,0.95);
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       border-top: 3px solid #ff9800;
     }
 
@@ -76,6 +154,12 @@
       color: #333;
       line-height: 1.6;
     }
+
+    /* Responsive */
+    @media(max-width:768px){
+      .product-details { flex-direction: column; }
+      .product-image, .product-info { flex:1 1 100%; }
+    }
   </style>
 </head>
 <body>
@@ -94,20 +178,18 @@
   <a href="frane.php">Frâne</a>
   <a href="accesorii.php">Accesorii</a>
   <a href="anvelope.php">Anvelope</a>
-  <a href="ulei.php" class="active">Ulei si Filtre</a>
+  <a href="ulei.php" class="active">Ulei și Filtre</a>
 </nav>
 
 <div class="container">
   <aside class="sidebar">
-   <ul>
- <h3>Categorii populare</h3>
+    <h3>Categorii populare</h3>
     <ul>
       <li>Ulei Motor Enduro</li>
       <li>Ulei Motor Race</li>
       <li>Filtre Sport</li>
       <li>Filtre Enduro</li>
     </ul>
- </ul>
   </aside>
 
   <div class="main-content">
@@ -123,10 +205,8 @@
 
           <button class="add-to-cart">Adaugă în coș 🛒</button>
 
-          <!-- BUTON AFISARE/ASCUNDERE DETALII -->
           <button class="toggle-details">Ascunde detalii</button>
 
-          <!-- BUTON VERIFICARE STOC -->
           <button class="check-stock">Verifică stoc</button>
 
           <div class="description" id="productDescription">
@@ -147,9 +227,7 @@
   </div>
 </div>
 
-<!-- SCRIPT PENTRU FUNCTIONALITATE -->
 <script>
-  // Ascunde/Afișează detalii
   const toggleBtn = document.querySelector(".toggle-details");
   const description = document.getElementById("productDescription");
 
@@ -163,9 +241,7 @@
     }
   });
 
-  // Buton verificare stoc
   const stockBtn = document.querySelector(".check-stock");
-
   stockBtn.addEventListener("click", () => {
     stockBtn.style.backgroundColor = "#4CAF50";
     stockBtn.textContent = "Stoc disponibil ✓";

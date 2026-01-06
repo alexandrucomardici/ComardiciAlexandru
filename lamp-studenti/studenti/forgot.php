@@ -1,4 +1,7 @@
-<!-- forgot.php -->
+<?php
+include "db.php";  // asigură-te că calea e corectă
+?>
+
 <!DOCTYPE html>
 <html lang="ro">
 <head>
